@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <header class="top-page-header">
+      <div class="left-side-header">
+        <a class="title" href="#"><b>Favo Chat</b></a>
+      </div>
+      <div class="right-side-header">
+        <div class="finish-room">
+          <a href="#">チャット終了</a>
+        </div>
+        <form class ="search-form" action="#">
+          <input class="input-box" placeholder="チャットルームを探す">
+          <button class="search-button">検索</button>
+        </form>
+        <div class ="user">
+          <ul class="lists">
+            <li>
+              <a class="login" href="#">ログイン</a>
+            </li>
+            <li>
+              <a class="sign-up" href="#">新規登録</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+    <div class="side-bar">
+      <%= render "side_bar" %>
+    </div>
+    <div class="chat">
+      <%= render "main_chat" %>
+    </div>
+  </body>
+</div>
