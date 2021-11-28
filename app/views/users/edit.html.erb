@@ -1,0 +1,37 @@
+<div class='account-page' id='account-page'>
+  <div class='account-page_innner clearfix'>
+    <div class='account-page_inner-header account-page_header'>
+      <div class='account-page_left'>
+        <h2>EDDIT ACCOUNT</h2>
+        <h5>アカウントの編集</h5>
+      </div>
+      <div class='account-page_right'>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: 'btn'%>
+        <%= link_to "BACK TO THE CHAT", :back, class: 'btn'%>
+      </div>
+    </div>
+    <div class='account-page_inner-main user-form'>
+      <%= form_with model:current_user, local: true do |f|%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :nickname%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :nickname, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :email%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email%>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "更新する", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,129 @@
+.account-page_inner-header {
+  width: 980px;
+  margin: 20px auto;
+  padding: 60px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+  display: flex;
+}
+
+.account-page_inner-main {
+  width: 980px;
+  margin: 25px auto;
+  padding: 60px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+}
+
+.account-page_left h2 {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.account-page_left h2:after {
+  content: "";
+  display: block;
+  width: 400px;
+  margin-top: 5px;
+  border-bottom: 1px solid #F28379;
+}
+
+.account-page_left h5 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.account-page_right a {
+  margin-left: 200px;
+  display: flex;
+  color: #737373;
+
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field-label {
+  padding: 5px 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.field-label i {
+  font-size: 11px;
+}
+
+.field-input {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+
+.account-page_inner-main input[type=submit] {
+  margin-top: 20px;
+  color: #F2F0EB;
+  background-color: #F28379;
+}
+
+.account-page_inner .field-label .field_with_errors {
+  display: inline-block;
+  color: #F28379;
+  font-weight: 400;
+}
+
+.account-page_inner .field-input .field_with_errors {
+  position: relative;
+}
+
+.account-page_inner .field-input .field_with_errors:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #F28379;
+}
+
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+#error_explanation h2 {
+  margin-bottom: 10px;
+  color: #F28379;
+  font-size: 14px;
+}
+#error_explanation ul {
+  margin: 0;
+  padding-left: 17px;
+  list-style: square;
+}
+#error_explanation li {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}

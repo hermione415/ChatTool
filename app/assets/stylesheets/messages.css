@@ -74,6 +74,22 @@
   list-style: none;
 }
 
+.user-nickname {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #737373;
+  font-size: 20px;
+}
+
+.logout {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #737373;
+  font-size: 20px;
+}
+
 .login {
   text-decoration: none;
   line-height: 32px;
