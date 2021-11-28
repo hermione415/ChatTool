@@ -1,0 +1,38 @@
+<div class='account-page' id='account-page'>
+  <div class='account-page_innner clearfix'>
+    <div class='account-page_inner-header account-page_header'>
+      <div class='account-page_left'>
+        <h2>LOG IN</h2>
+        <h5>ログイン</h5>
+      </div>
+      <div class='account-page_right'>
+        <%= render "devise/shared/links"%>
+      </div>
+    </div>
+    <div class='account-page_inner-main user-form'>
+      <%= form_with model:resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+        <%= devise_error_messages!%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :email%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :password%>
+            <i>(英数字6文字以上)</i>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password, autocomplete: "off"%>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "ログイン", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
