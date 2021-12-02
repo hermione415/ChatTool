@@ -1,0 +1,68 @@
+h1 {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chat-room-form {
+  width: 980px;
+  margin: 20px auto;
+  padding: 60px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.chat-room-form_label {
+  display: block;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.chat-room-form_input {
+  float: left;
+  width: 100%;
+  line-height: 30px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.chat-room-form_action-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #F2F0EB;
+  background-color: #F28379;
+  border: 0;
+}
+
+.chat-room-form_field {
+  margin-top: 30px;
+}
+
+.chat-room-form_field:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.chat-room-form_field-left {
+  float: left;
+  width: 30%;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.chat-room-form_field-right {
+  float: right;
+  width: 70%;
+}
+
+.field_with_errors {
+  display: contents;
+}
