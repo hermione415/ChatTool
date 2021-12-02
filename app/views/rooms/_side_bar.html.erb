@@ -1,0 +1,16 @@
+<div class="create-room">
+  <%= link_to "チャットを作成", new_room_path %>
+</div>
+
+<div class="rooms">
+  <% @rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+      </div>
+      <div class="room-info">
+        <%= room.info %></a>
+      </div>
+    </div>
+  <% end %>
+</div>

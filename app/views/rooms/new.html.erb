@@ -1,0 +1,24 @@
+<div class='chat-room-form'>
+  <h1>新規チャットルームの作成</h1>
+  <%=form_with model: @room, local: true do |f|%>
+    <div class='chat-room-form_field'>
+      <div class='chat-room-form_field-left'>
+        <%= f.label :チャットルーム名, class: 'chat-room-form_label'%>
+      </div>
+      <div class='chat-room-form_field-right'>
+        <%= f.text_field :name, class: 'chat-room-name chat-room-form_input', placeholder: 'チャットルーム名を入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form_field'>
+      <div class='chat-room-form_field-left'>
+        <%= f.label :チャットルームの説明, class: 'chat-room-form_label'%>
+      </div>
+      <div class='chat-room-form_field-right'>
+        <%= f.text_field :info, class: 'chat-room-info chat-room-form_input', placeholder: 'チャットルームの説明を入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form_field'>
+      <%= f.submit :チャットルームの作成, class: 'chat-room-form_action-btn'%>
+    </div>
+  <% end %>
+</div>
