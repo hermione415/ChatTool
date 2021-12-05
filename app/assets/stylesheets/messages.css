@@ -9,7 +9,6 @@
 }
 
 .left-side-header {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
@@ -26,19 +25,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-}
-
-.finish-room {
-  padding: 20px 40px;
-}
-
-.finish-room a {
-  text-decoration: none;
-  height: 30px;
-  color: #F2B2AC;
-  font-size: 13px;
-  border: 1px solid #F2B2AC;
-  padding: 10px 20px;
 }
 
 .search-form {
@@ -154,9 +140,27 @@
 
 .messages {
   width: calc(100vw - 250px);
-  height: calc(100vh - 80px - 80px);
-  padding: 46px 40px 0;
+  height: calc(100vh - 80px - 90px);
+  padding: 25px 40px 0;
   overflow: scroll;
+}
+
+.chat-header {
+  font-size: 30px;
+  font-weight: bold;
+  color: #737373;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.finish-room a {
+  text-decoration: none;
+  height: 30px;
+  color: #F28379;
+  font-size: 13px;
+  border: 1px solid #F28379;
+  padding: 10px 20px;
 }
 
 .message {
@@ -190,9 +194,10 @@
 
 .form {
   background-color: #F2F0EB;
-  height: 80px;
+  height: 90px;
   padding: 20px 40px;
   display: flex;
+  width: calc(100vw - 250px);
 }
 
 .form-input {
