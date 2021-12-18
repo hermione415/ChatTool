@@ -105,6 +105,82 @@
   background-color: #F28379;
 }
 
+.top-page-header-mypage {
+  width: 980px;
+  margin: 20px auto;
+  padding: 60px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+  display: flex;
+}
+
+.mypage-title {
+  text-decoration: none;
+}
+
+.mypage-title h2 {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.mypage-title h2:after {
+  content: "";
+  display: block;
+  width: 400px;
+  margin-top: 5px;
+  border-bottom: 1px solid #F28379;
+}
+
+.mypage-title h5 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.mypage-content {
+  width: 980px;
+  margin: 25px auto;
+  padding: 60px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+}
+
+li {
+  margin: 30px 0;
+}
+
+.edit-account-page {
+  text-decoration: none;
+  color: #F28379;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.post-page {
+  text-decoration: none;
+  color: #F28379;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.calendar-page {
+  text-decoration: none;
+  color: #F28379;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
 
 #error_explanation {
   margin: 20px 0;
