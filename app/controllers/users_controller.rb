@@ -11,9 +11,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @nickname = current_user.nickname
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:nickname, :email)
   end
+
+
 end
