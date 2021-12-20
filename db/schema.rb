@@ -45,10 +45,11 @@ ActiveRecord::Schema.define(version: 2021_12_13_150429) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
-    t.string "text"
-    t.text "image"
+    t.text "text"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "room_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -83,6 +84,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_150429) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "posts", "users"
   add_foreign_key "room_users", "rooms"
   add_foreign_key "room_users", "users"
 end

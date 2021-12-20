@@ -4,7 +4,7 @@
     <h5><%= @nickname %>さんのマイページ</h5>
   </a>
   <div class='account-page_right'>
-    <%= link_to "チャットへ戻る", :back, class: 'btn'%>
+    <%= link_to "チャットへ戻る", root_path, class: 'btn'%>
   </div>
 </div>
 <div class="mypage-content">
@@ -12,7 +12,7 @@
     <li><%= link_to 'EDIT ACCOUNT', edit_user_path, class: "edit-account-page" %>
       <p>アカウントの編集</p>
     </li>
-    <li><%= link_to 'POSTS', posts_path, class: "post-page" %>
+    <li><%= link_to 'POSTS', post_path, class: "post-page" %>
       <p>投稿一覧</p>
     </li>
     <li><%= link_to 'CALENDAR', class: "calendar-page" %>

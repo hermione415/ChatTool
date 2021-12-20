@@ -1,0 +1,33 @@
+<div class='post-form'>
+  <h1>新規投稿の作成</h1>
+  <%=form_with model: @post, local: true do |f|%>
+      <div class='post-form_field'>
+      <div class='post-form_field-left'>
+        <%= f.label :画像, class: 'post-form_label'%>
+      </div>
+      <div class='image-upload'>
+        <p>画像をアップロード</p>
+        <%= f.file_field :image, class: 'post-image post-form_input'%>
+      </div>
+    </div>
+    <div class='post-form_field'>
+      <div class='post-form_field-left'>
+        <%= f.label :タイトル, class: 'post-form_label'%>
+      </div>
+      <div class='post-form_field-right'>
+        <%= f.text_field :title, class: 'post-title post-form_input', placeholder: 'タイトルを入力してください'%>
+      </div>
+    </div>
+    <div class='post-form_field'>
+      <div class='post-form_field-left'>
+        <%= f.label :詳細, class: 'post-form_label'%>
+      </div>
+      <div class='post-form_field-right'>
+        <%= f.text_area :text, class: 'post-text post-form_input', placeholder: '詳細を入力してください',rows:"7"%>
+      </div>
+    </div>
+    <div class='post-form_field'>
+      <%= f.submit :新規投稿の作成, class: 'post-form_action-btn'%>
+    </div>
+  <% end %>
+</div>
