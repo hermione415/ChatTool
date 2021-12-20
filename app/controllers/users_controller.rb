@@ -12,7 +12,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @nickname = current_user.nickname
+    user = User.find(params[:id])
+    @nickname = user.nickname
+    @messages = user.messages
   end
 
   private

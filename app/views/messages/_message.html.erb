@@ -1,7 +1,7 @@
 <div class="message">
   <div class="upper-message">
     <div class="message-user">
-      <%= message.user.nickname %>
+      <a><%= link_to message.user.nickname, "/users/#{message.user.id}" %></a>
     </div>
     <div class="message-date">
       <%= l message.created_at %>
