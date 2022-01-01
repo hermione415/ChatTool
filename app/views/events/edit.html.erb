@@ -1,0 +1,40 @@
+<div class='event-form'>
+  <h1>予定の編集</h1>
+  <%= form_with model: @event, id: @event.id, local: true do |f|%>
+    <div class='event-form_field'>
+      <div class='event-form_field-left'>
+        <%= f.label :タイトル, class: 'event-form_label'%>
+      </div>
+      <div class='event-form_field-right'>
+        <%= f.text_field :title, class: 'event-name event-form_input'%>
+      </div>
+    </div>
+    <div class='event-form_field'>
+      <div class='event-form_field-left'>
+        <%= f.label :開始時間, class: 'event-form_label'%>
+      </div>
+      <div class='event-form_field-right_time'>
+        <%= f.datetime_select :start_time, class: 'event-time event-form_input'%>
+      </div>
+    </div>
+    <div class='event-form_field'>
+      <div class='event-form_field-left'>
+        <%= f.label :終了時間, class: 'event-form_label'%>
+      </div>
+      <div class='event-form_field-right_time'>
+        <%= f.datetime_select :finish_time, class: 'event-time event-form_input'%>
+      </div>
+    </div>
+    <div class='event-form_field'>
+      <div class='event-form_field-left'>
+        <%= f.label :内容, class: 'event-form_label'%>
+      </div>
+      <div class='event-form_field-right'>
+        <%= f.text_area :contents, class: 'event-contents event-form_input'%>
+      </div>
+    </div>
+    <div class='event-form_field_edit_btn'>
+      <%= f.submit :更新する, class: 'event-form_action-btn'%>
+    </div>
+  <% end %>
+</div>

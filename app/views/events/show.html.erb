@@ -1,0 +1,42 @@
+<div class="event-header">
+  <a class="title" href="#"><b>Schedule</b></a>
+  <div class="event-header">
+    <form class ="search-form" action="#">
+      <input class="input-box" placeholder="予定を探す">
+      <button class="search-button">検索</button>
+    </form>
+  </div>
+  <div class="lists">
+    <li><%= link_to 'マイページへ戻る', user_path, class: 'event'%></li>
+    <li><%= link_to '予定を登録', new_event_path, class: 'event'%></li>
+  </div>
+</div>
+
+<div class="event-section">
+  <%= month_calendar events: @events do |date, events| %>
+    <%= date.day %>
+    <% events.each do |event| %>
+      <div class="event-info">
+        <%= link_to event.title, confirm_event_path(event.id), class: 'trigger'%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+<script>
+  var trigger = document.getElementsByClassName("trigger");
+  var triggers = Array.from(trigger);
+
+    triggers.forEach(function(target) {
+
+    target.addEventListener('mouseover', function() {
+      target.setAttribute("style", "color:#F28379;");
+    });
+
+    target.addEventListener('mouseout', function() {
+      target.setAttribute("style", "color:#737373;");
+    });
+  });
+</script>
+

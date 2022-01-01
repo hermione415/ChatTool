@@ -1,0 +1,153 @@
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.event {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #737373;
+  font-size: 20px;
+}
+
+.event-section {
+  width: 120vh;
+  text-align: center;
+  margin: auto;
+  padding-top: 30px;
+  text-decoration: none;
+  color: #737373;
+}
+
+.event-time {
+  font-size: 18px;
+  height: 30px;
+  width: 60px;
+}
+
+.event-form {
+  width: 980px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.event-form_label {
+  display: block;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 18px;
+}
+
+.event-form_input {
+  float: left;
+  width: 100%;
+  line-height: 30px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.event-form_action-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #F2F0EB;
+  background-color: #F28379;
+  border: 0;
+}
+
+.back {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #F2F0EB;
+  background-color: #F28379;
+  border: 0;
+}
+
+.event-form_field {
+  margin-top: 30px;
+}
+
+.event-form_field:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.event-form_field-left {
+  float: left;
+  width: 30%;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.event-form_field-right {
+  float: right;
+  width: 70%;
+}
+
+.event-form_field-right_time {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.event-form_field_btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0px
+}
+
+.trigger {
+  text-decoration: none;
+  color: #737373;
+}
+
+.show-events {
+  width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #F2F0EB;
+  border: 2px solid #737373;
+  border-radius: 5px;
+  color: #737373;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.show-event {
+  margin: 30px 0;
+  font-size: 24px;
+}
+
+.show-event>h1 {
+  color: #F28379;
+}
+
+.event-more {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.event-form_field_edit_btn {
+  margin-top: 30px;
+  text-align: center;
+  padding: 0 0px
+}
+
+
+.field_with_errors {
+  display: contents;
+}
+
+
+
