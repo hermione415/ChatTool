@@ -1,0 +1,26 @@
+<div class="event-header">
+  <a class="title" href="#"><b>Schedule</b></a>
+  <div class="lists">
+    <li><%= link_to '戻る', :back, class: 'event'%></li>
+    <li><%= link_to '予定を編集', edit_event_path, class: 'event'%></li>
+  </div>
+</div>
+
+<div class="show-events">
+  <div class="show-event">
+    <h1>タイトル</h1>
+    <div class="event-more"><%= @event.title %></div>
+  </div>
+  <div class="show-event">
+    <h1>開始時間</h1>
+    <div class="event-more"><%= l(@event.start_time, format: :short) %></div>
+  </div>
+  <div class="show-event">
+    <h1>終了時間</h1>
+    <div class="event-more"><%= l(@event.finish_time, format: :short) %></div>
+  </div>
+  <div class="show-event">
+    <h1>内容</h1>
+    <div class="event-more"><%= @event.contents %></div>
+  </div>
+</div>
