@@ -4,7 +4,7 @@
       <a><%= link_to message.user.nickname, "/users/#{message.user.id}" %></a>
     </div>
     <div class="message-date">
-      <%= l message.created_at %>
+      <%= l message.created_at, format: :long%>
     </div>
   </div>
   <div class="lower-message">
