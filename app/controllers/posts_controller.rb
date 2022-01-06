@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = @user.posts.includes(:user).order("created_at DESC")
-    @post = Post.find(params[:id])
   end
 
   def new
