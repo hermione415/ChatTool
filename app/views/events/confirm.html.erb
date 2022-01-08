@@ -2,7 +2,9 @@
   <a class="title" href="#"><b>Schedule</b></a>
   <div class="lists">
     <li><%= link_to '戻る', :back, class: 'event'%></li>
-    <li><%= link_to '予定を編集', edit_event_path, class: 'event'%></li>
+    <% if user_signed_in? && current_user.id == @event.user.id %>
+      <li><%= link_to '予定を編集', edit_event_path, class: 'event'%></li>
+    <% end %>
   </div>
 </div>
 

@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_beginning_of_week
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :set_event, only:[:show, :confirm, :edit, :update]
 
   def index
     @events = Event.all
@@ -19,26 +21,31 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
     @user = User.find(params[:id])
     @events = @user.events.includes(:user)
   end
 
   def confirm
-    @event = Event.find(params[:id])
   end
 
   def edit
-    @event = Event.find(params[:id])
+    if @event.user == current_user
+      render :edit
+    else
+      redirect_to root_path
+    end
   end
 
   def update
-    @event = Event.find(params[:id])
     if @event.update(event_params)
       redirect_to event_path(@event.user.id)
     else
       render :edit
     end
+  end
+
+  def set_event
+    @event = Event.find(params[:id])
   end
 
   private

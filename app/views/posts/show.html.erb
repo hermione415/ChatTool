@@ -8,7 +8,9 @@
   </div>
   <div class="lists">
     <li><%= link_to 'マイページへ戻る', user_path, class: 'post' %></li>
-    <li><%= link_to 'POST', new_post_path, class: 'post'%></li>
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <li><%= link_to 'POST', new_post_path, class: 'post'%></li>
+    <% end %>
   </div>
 </div>
 

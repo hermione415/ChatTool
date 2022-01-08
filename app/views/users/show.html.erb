@@ -9,9 +9,11 @@
 </div>
 <div class="mypage-content">
   <ul class="mypage-lists">
-    <li><%= link_to 'EDIT ACCOUNT', edit_user_path, class: "edit-account-page" %>
-      <p>アカウントの編集</p>
-    </li>
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <li><%= link_to 'EDIT ACCOUNT', edit_user_path, class: "edit-account-page" %>
+        <p>アカウントの編集</p>
+      </li>
+    <% end %>
     <li><%= link_to 'POSTS', post_path, class: "post-page" %>
       <p>投稿一覧</p>
     </li>

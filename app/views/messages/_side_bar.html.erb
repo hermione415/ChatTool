@@ -1,6 +1,8 @@
-<div class="create-room">
-  <%= link_to "チャットを作成", new_room_path %>
-</div>
+<% if user_signed_in? %>
+  <div class="create-room">
+    <%= link_to "チャットを作成", new_room_path %>
+  </div>
+<% end %>
 
 <div class="rooms">
   <% @rooms.each do |room| %>

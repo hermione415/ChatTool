@@ -16,9 +16,11 @@
             <div class="room-name_header">
               <%= @room.name %>
             </div>
-            <div class="finish-room">
-              <%= link_to "チャット終了", room_path(@room), method: :delete %>
-            </div>
+            <% if user_signed_in? %>
+              <div class="finish-room">
+                <%= link_to "チャット終了", room_path(@room), method: :delete %>
+              </div>
+            <% end %>
           </div>
           <%= render partial: 'message', collection: @messages %>
         </div>
