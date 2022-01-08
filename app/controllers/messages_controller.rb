@@ -1,14 +1,13 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
+  before_action :set_room, only: [:index, :create]
+
   def index
-    @rooms = Room.all
     @message = Message.new
-    @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)
   end
 
   def create
-    @rooms = Room.all
-    @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
     if @message.save
       redirect_to room_messages_path(@room)
@@ -17,6 +16,12 @@ class MessagesController < ApplicationController
       render :index
     end
   end
+
+  def set_room
+    @rooms = Room.all
+    @room = Room.find(params[:room_id])
+  end
+
 
   private
 

@@ -8,7 +8,9 @@
   </div>
   <div class="lists">
     <li><%= link_to 'マイページへ戻る', user_path, class: 'event'%></li>
-    <li><%= link_to '予定を登録', new_event_path, class: 'event'%></li>
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <li><%= link_to '予定を登録', new_event_path, class: 'event'%></li>
+    <% end %>
   </div>
 </div>
 
