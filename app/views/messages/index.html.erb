@@ -1,40 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <header class="top-page-header">
-      <%= render "rooms/top_header" %>
-    </header>
-    <div class="wrapper">
-      <div class="side-bar">
-        <%= render "messages/side_bar" %>
-      </div>
-      <div class="main-chat">
-        <div class="messages">
-          <div class="chat-header">
-            <div class="room-name_header">
-              <%= @room.name %>
-            </div>
-            <% if user_signed_in? %>
-              <div class="finish-room">
-                <%= link_to "チャット終了", room_path(@room), method: :delete %>
-              </div>
-            <% end %>
-          </div>
-          <%= render partial: 'message', collection: @messages %>
+<header class="top-page-header">
+  <%= render "rooms/top_header" %>
+</header>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "messages/side_bar" %>
+  </div>
+  <div class="main-chat">
+    <div class="messages">
+      <div class="chat-header">
+        <div class="room-name_header">
+          <%= @room.name %>
         </div>
-        <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
-          <div class="form-input">
-            <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージを送信してください' %>
-            <label class="form-image">
-              <span class="image-file">画像</span>
-              <%= f.file_field :image, class: 'hidden' %>
-            </label>
+        <% if user_signed_in? %>
+          <div class="finish-room">
+            <%= link_to "チャット終了", room_path(@room), method: :delete %>
           </div>
-          <%= f.submit '送信', class: 'form-submit' %>
         <% end %>
-      <div>   
-    </div>  
-  </body>
-</html>
+      </div>
+      <%= render partial: 'message', collection: @messages %>
+    </div>
+    <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+      <div class="form-input">
+        <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージを送信してください' %>
+        <label class="form-image">
+          <span class="image-file">画像</span>
+          <%= f.file_field :image, class: 'hidden' %>
+        </label>
+      </div>
+      <%= f.submit '送信', class: 'form-submit' %>
+    <% end %>
+  <div>   
+</div>  

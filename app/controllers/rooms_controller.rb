@@ -23,7 +23,7 @@ class RoomsController < ApplicationController
   end
 
   private
-  
+
   def room_params
     params.require(:room).permit(:name, :info)
   end

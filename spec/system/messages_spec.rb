@@ -10,9 +10,9 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
     it '送る値が空の為、メッセージの送信に失敗する' do
       sign_in(@message.user)
       click_on(@message.room.name)
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.not_to change { Message.count }
+      end.not_to change { Message.count }
       expect(current_path).to eq(room_messages_path(@message.room))
     end
   end
@@ -25,9 +25,9 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       fill_in 'message_content', with: post
 
       # 送信した値がDBに保存されていることを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Message.count }.by(1)
+      end.to change { Message.count }.by(1)
 
       # 投稿一覧画面に遷移していることを確認する
       expect(current_path).to eq(room_messages_path(@message.room))
@@ -46,11 +46,10 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       # 画像選択フォームに画像を添付する
       attach_file('message[image]', image_path, make_visible: true)
 
-
       # 送信した値がDBに保存されていることを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Message.count }.by(1)
+      end.to change { Message.count }.by(1)
 
       # 投稿一覧画面に遷移していることを確認する
       expect(current_path).to eq(room_messages_path(@message.room))
@@ -74,9 +73,9 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       fill_in 'message_content', with: post
 
       # 送信した値がDBに保存されていることを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Message.count }.by(1)
+      end.to change { Message.count }.by(1)
 
       # 送信した値がブラウザに表示されていることを確認する
       expect(page).to have_content(post)

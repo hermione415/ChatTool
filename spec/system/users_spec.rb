@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :system do
+RSpec.describe 'Users', type: :system do
   it 'ログインしていない状態でトップページにアクセスした場合、サインインページに移動する' do
     visit root_path
     expect(current_path).to eq(new_user_session_path)
@@ -25,5 +25,4 @@ RSpec.describe "Users", type: :system do
     click_on('ログイン')
     expect(current_path).to eq(new_user_session_path)
   end
-
 end

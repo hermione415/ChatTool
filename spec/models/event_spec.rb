@@ -33,7 +33,7 @@ RSpec.describe Event, type: :model do
       it 'ユーザーが紐付いていなければ投稿できない' do
         @event.user = nil
         @event.valid?
-        expect(@event.errors.full_messages).to include("User must exist")
+        expect(@event.errors.full_messages).to include('User must exist')
       end
     end
   end

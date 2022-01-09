@@ -102,14 +102,15 @@
 }
 
 .create-room {
-  padding: 20px 40px;
-  margin-left: 20px;
+  padding: 10px 20px;
+  justify-content: center;
+  text-align: center;
 }
 
 .create-room a {
   text-decoration: none;
   color: #F2B2AC;
-  font-size: 13px;
+  font-size: 12px;
   border: 1px solid #F2B2AC;
   padding: 10px 20px;
 }

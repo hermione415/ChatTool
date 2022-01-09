@@ -25,3 +25,18 @@
   <% end %>
 </div>
 
+<script>
+  var trigger = document.getElementsByClassName("trigger");
+  var triggers = Array.from(trigger);
+
+    triggers.forEach(function(target) {
+
+    target.addEventListener('mouseover', function() {
+      target.setAttribute("style", "color:#F28379;");
+    });
+
+    target.addEventListener('mouseout', function() {
+      target.setAttribute("style", "color:#737373;");
+    });
+  });
+</script>
