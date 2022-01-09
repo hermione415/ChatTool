@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_beginning_of_week
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-  before_action :set_event, only:[:show, :confirm, :edit, :update]
+  before_action :set_event, only:[:confirm, :edit, :update]
 
   def index
     @events = Event.all
@@ -23,6 +23,7 @@ class EventsController < ApplicationController
   def show
     @user = User.find(params[:id])
     @events = @user.events.includes(:user)
+    @event = Event.find(params[:id])
   end
 
   def confirm
