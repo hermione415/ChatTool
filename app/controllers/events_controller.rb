@@ -23,7 +23,6 @@ class EventsController < ApplicationController
   def show
     @user = User.find(params[:id])
     @events = @user.events.includes(:user)
-    @event = Event.find(params[:id])
   end
 
   def confirm
