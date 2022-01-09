@@ -1,6 +1,8 @@
 <div class='event-form'>
   <h1>予定の登録</h1>
   <%= form_with model: @event, local: true do |f| %>
+  <%= render 'devise/shared/error_messages', model: f.object %>
+
     <div class='event-form_field'>
       <div class='event-form_field-left'>
         <%= f.label :タイトル, class: 'event-form_label'%>
@@ -34,7 +36,6 @@
       </div>
     </div>
     <div class='event-form_field_btn'>
-      <%= f.submit :戻る, class: 'back'%>
       <%= f.submit :登録する, class: 'event-form_action-btn'%>
     </div>
   <% end %>
