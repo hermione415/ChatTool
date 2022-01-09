@@ -12,11 +12,11 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(event_params)
-    if params[:back]
-      render :new
-    else @event.save
+    @event = Event.new(event_params)
+    if @event.save
       redirect_to event_path(@event.user.id)
+    else
+      render :new
     end
   end
 
